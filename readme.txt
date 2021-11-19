@@ -8,6 +8,7 @@ The time I had I focused on getting a solution to the problem, which I would nee
 This took me just over 6 hours as had to do a bit of testing to make sure timestamp solution was working as I expected.
 
 
-Some slight changes have been made to the foreach statement checking times, to manipulate the date of today to check for 24 hours as the data was showing 
+Some slight changes have been made to the date used foreach statement checking times, to manipulate the date of today to check for 24 hours as the data was showing this is only case in the page2.php file showing transactions2.json data.
+Index.php and transactiondata.json is working like the solution requested. 
 
 Clark Brettell.
