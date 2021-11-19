@@ -14,7 +14,7 @@
 
  
 <?php
-header( "refresh:600;url=page2.php" );
+header( "refresh:60;url=page2.php" );
 $strJsonFileContents = file_get_contents("assets/json/transactions.json");
 $transactionArrayOne = json_decode($strJsonFileContents, true);
 $today = date("Y-m-d H:i:s");
@@ -58,11 +58,11 @@ transactionsJson.forEach(element => {
 })
 
 /** loops over the json object to get the date_created for each item converts it to timestamp
- *  and make comparisons with current date and time. Items seperated items into arrays based on the difference of timestamps **/
+ *  and make comparisons with current date and time. Items seperated items into arrays based on the difference of timestamps. **/
 transactionsJson.forEach(element => {
-    if(ninedaysago - toTimestamp(element["date_created"]) < oneday){
+    if(today - toTimestamp(element["date_created"]) < oneday){
         lessoneday.push(element);
-    } else if (ninedaysago - toTimestamp(element["date_created"])  < twodays) {
+    } else if (today - toTimestamp(element["date_created"])  < twodays) {
         morethanoneday.push(element);
     } else {
         morethantwodays.push(element)

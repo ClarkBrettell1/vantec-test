@@ -14,7 +14,7 @@
 
  
 <?php
-header( "refresh:600;url=index.php" );
+header( "refresh:60;url=index.php" );
 $strJsonFileContents = file_get_contents("assets/json/transactions2.json");
 $transactionArrayOne = json_decode($strJsonFileContents, true);
 $today = date("Y-m-d H:i:s");
