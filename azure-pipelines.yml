@@ -8,7 +8,9 @@ trigger:
 
 pool:
   vmImage: windows-2019
+  
 environment: 'Machine'
+
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
