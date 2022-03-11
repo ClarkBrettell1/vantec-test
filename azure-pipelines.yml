@@ -9,11 +9,22 @@ trigger:
 pool:
   vmImage: windows-2019
 
+    environment: 'Machine'
+  strategy:
+    # Default deployment strategy, more coming...
+    runOnce:
+      deploy:
+        steps:
+        - checkout: self 
+        - script: echo my first deployment
+
 steps:
 - script: echo Hello, world!
+  echo $(Agent.BuildDirectory)
   displayName: 'Run a one-line script'
 
 - script: |
+    workingDirectory: C:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
